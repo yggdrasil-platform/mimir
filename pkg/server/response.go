@@ -10,6 +10,7 @@ import (
 
 type HealthcheckResponseBody struct {
 	Environment string `json:"environment"`
+	IsDatabaseConnected bool `json:"isDatabaseConnected"`
 	Name string `json:"name"`
 	Version string `json:"version"`
 }
