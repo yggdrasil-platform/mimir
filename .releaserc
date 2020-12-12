@@ -16,5 +16,5 @@
     ],
     "@semantic-release/github"
   ],
-  "repositoryUrl": "https://github.com/kieranroneill/new-go-service-template"
+  "repositoryUrl": "https://github.com/kieranroneill/mimir"
 }

@@ -4,9 +4,11 @@ import (
   "crypto"
   "crypto/aes"
   "crypto/cipher"
+  "crypto/rand"
   "encoding/hex"
   "errors"
   "fmt"
+  "io"
   "strings"
 )
 
@@ -47,6 +49,10 @@ func Decrypt(entxt string, k string) (string, error) {
 
 func Encrypt(plntxt string, k string) (string, error) {
   nonce := make([]byte, 12) // Never use more than 2^32 random nonces with a given key because of the risk of a repeat.
+  if _, err := io.ReadFull(rand.Reader, nonce); err != nil {
+    return "", err
+  }
+
   enkey := hashWithSha256(k)
   block, err := aes.NewCipher(enkey)
   if err != nil {

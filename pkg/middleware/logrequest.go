@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/kieranroneill/new-go-service-template/pkg/logger"
+	"github.com/kieranroneill/mimir/pkg/logger"
   "net/http"
 )
 

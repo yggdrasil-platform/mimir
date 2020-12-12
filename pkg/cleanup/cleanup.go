@@ -1,7 +1,7 @@
 package cleanup
 
 import (
-	"github.com/kieranroneill/new-go-service-template/pkg/logger"
+	"github.com/kieranroneill/mimir/pkg/logger"
 	"os"
 	"os/signal"
 	"syscall"

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/kieranroneill/new-go-service-template/pkg/application"
-	"github.com/kieranroneill/new-go-service-template/pkg/cleanup"
-  "github.com/kieranroneill/new-go-service-template/pkg/logger"
-	"github.com/kieranroneill/new-go-service-template/pkg/router"
-	"github.com/kieranroneill/new-go-service-template/pkg/server"
+	"github.com/kieranroneill/mimir/pkg/application"
+	"github.com/kieranroneill/mimir/pkg/cleanup"
+  "github.com/kieranroneill/mimir/pkg/logger"
+	"github.com/kieranroneill/mimir/pkg/router"
+	"github.com/kieranroneill/mimir/pkg/server"
 )
 
 func main() {

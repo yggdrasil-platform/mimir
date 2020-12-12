@@ -1,0 +1,13 @@
+input AuthenticateUserInput {
+  password: String!
+  userId: Int!
+}
+
+type Mutation {
+  authenticateUser(input: AuthenticateUserInput!): Token!
+  registerUser(input: AuthenticateUserInput!): Token!
+}
+
+type Query {
+  verify(accessToken: String!): Boolean!
+}

@@ -28,7 +28,7 @@ function main {
   -e POSTGRES_USER="${DB_USER}" \
   -d \
   -p "${DB_PORT}":5432 \
-  postgres:latest)
+  postgres:12-alpine)
   echo "Running PostgreSQL container: ${db_container_id}"
 
   # Runs redis Docker image in the background.
@@ -36,7 +36,7 @@ function main {
   --name mimir_store_test \
   -d \
   -p "${STORE_PORT}":6379 \
-  redis:latest redis-server --requirepass "${STORE_PASSWORD}")
+  redis:6.0.9-alpine redis-server --requirepass "${STORE_PASSWORD}")
   echo "Running Redis container: ${store_container_id}"
 
   # Wait for container to start.

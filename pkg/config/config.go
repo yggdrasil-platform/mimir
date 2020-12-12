@@ -5,17 +5,23 @@ import (
 )
 
 type Config struct {
+  ClientJWTSecretKey string
+  EncryptionKey string
   Environment string
 	Port string
-	Version string
   ServiceName string
+  UserJWTSecretKey string
+  Version string
 }
 
 func New() *Config {
 	return &Config{
+    ClientJWTSecretKey: GetEnv("CLIENT_JWT_SECRET_KEY", ""),
+    EncryptionKey: GetEnv("ENCRYPTION_KEY", ""),
 		Environment: GetEnv("ENV", ""),
 		Port: GetEnv("PORT", ""),
     ServiceName: GetEnv("SERVICE_NAME", ""),
+    UserJWTSecretKey: GetEnv("USER_JWT_SECRET_KEY", ""),
     Version: GetEnv("VERSION", ""),
 	}
 }

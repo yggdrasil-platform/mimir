@@ -3,8 +3,8 @@ package server
 import (
 	"encoding/json"
 	"github.com/go-playground/validator/v10"
-	_error "github.com/kieranroneill/new-go-service-template/pkg/error"
-	"github.com/kieranroneill/new-go-service-template/pkg/logger"
+	_error "github.com/kieranroneill/mimir/pkg/error"
+	"github.com/kieranroneill/mimir/pkg/logger"
   "net/http"
   "reflect"
   "strings"

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/go-playground/validator/v10"
-  "github.com/kieranroneill/new-go-service-template/pkg/logger"
+  "github.com/kieranroneill/mimir/pkg/logger"
 	"net/http"
 )
 

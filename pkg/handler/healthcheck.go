@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"github.com/kieranroneill/new-go-service-template/pkg/application"
-	_error "github.com/kieranroneill/new-go-service-template/pkg/error"
-	"github.com/kieranroneill/new-go-service-template/pkg/server"
+	"github.com/kieranroneill/mimir/pkg/application"
+	_error "github.com/kieranroneill/mimir/pkg/error"
+	"github.com/kieranroneill/mimir/pkg/server"
   "net/http"
 )
 

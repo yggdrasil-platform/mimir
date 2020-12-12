@@ -2,11 +2,16 @@ package database
 
 import (
 	"fmt"
-	"github.com/kieranroneill/new-go-service-template/pkg/logger"
+	"github.com/kieranroneill/mimir/pkg/logger"
+	"github.com/kieranroneill/mimir/pkg/model"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"os"
 )
+
+func RunMigrations(db *gorm.DB) error {
+  return db.AutoMigrate(&model.AuthUser{})
+}
 
 func New() (*gorm.DB, error) {
 	dbPort := "5432"

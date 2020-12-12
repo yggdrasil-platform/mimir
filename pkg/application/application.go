@@ -2,9 +2,10 @@ package application
 
 import (
   "github.com/gomodule/redigo/redis"
-  "github.com/kieranroneill/new-go-service-template/pkg/config"
-  "github.com/kieranroneill/new-go-service-template/pkg/database"
-  "github.com/kieranroneill/new-go-service-template/pkg/store"
+  "github.com/kieranroneill/mimir/pkg/config"
+  "github.com/kieranroneill/mimir/pkg/database"
+  "github.com/kieranroneill/mimir/pkg/logger"
+  "github.com/kieranroneill/mimir/pkg/store"
   "gorm.io/gorm"
 )
 
@@ -19,6 +20,11 @@ func New() (*Application, error) {
   db, err := database.New()
   if err != nil {
     return nil, err
+  }
+
+  // Run db migrations
+  if err = database.RunMigrations(db); err != nil {
+    logger.Error.Printf("failed to run database migrations: %s", err)
   }
 
   // Create a Redis pool

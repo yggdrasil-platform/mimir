@@ -2,8 +2,8 @@ package handler
 
 import (
 	"encoding/json"
-  "github.com/kieranroneill/new-go-service-template/pkg/application"
-  "github.com/kieranroneill/new-go-service-template/pkg/server"
+  "github.com/kieranroneill/mimir/pkg/application"
+  "github.com/kieranroneill/mimir/pkg/server"
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"
